@@ -1,0 +1,27 @@
+﻿a<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather Widget</title>
+        <link rel="stylesheet" href="res/css/styles.css">
+    </head>
+
+    <body>
+        <div style="background-color:red">
+            <h1>Header</h1>
+            <a href="#/map">Map</a>
+            <a href="#/category/1">1</a>
+        </div>
+        <div data-context="map">
+            <h1 data-bind="text: title"></h1>
+        </div>
+        <div  id="frame" data-defer="main">
+        </div>
+
+        <script src="libs/knockout.js"></script>
+        <script src="libs/jquery-2.0.3.min.js"></script>
+        <script src="libs/common_bundle.js"></script>
+        <script src="src/Presenter.js"></script>
+        <script src="src/LostAndFoundApp.js"></script>
+    </body>
+</html>
