@@ -18,22 +18,39 @@
       <div class="page-header">
 
         <h2 class="text-muted">Lost and found</h2>
-        <input id="searchfield" type="text" class="form-control" placeholder="Search(Ort, Zeit, Item?!)">
+          <form role="form">
+            <div class="form-group">
+              <input id="searchfield" type="text" class="form-control" placeholder="Search(Ort, Zeit, Item?!)">
+            </div>
+          </form>
+        
+      </div>
+      <div id="content">
+        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+          <li class="active"><a href="#map" data-toggle="tab">Map</a></li>
+          <li><a href="#list" data-toggle="tab">List</a></li>
+          <li><a href="#profile" data-toggle="tab">Profile</a></li>
+        </ul>
+
+        <div id="tabContent" class="tab-content">
+          <div class="tab-pane active fade" id="map">
+            <p>map content hier</p>
+          </div>
+          <div class="tab-pane fade" id="list">
+            <p>list content hier</p>
+          </div>
+          <div class="tab-pane fade" id="profile">
+            <p>profile content hier</p>
+          </div>
+        </div>
+
       </div>
 
-      <!--Navigation tabs-->
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="active"><a href="#" role="tab" data-toggle="tab">Map</a></li>
-        <li><a href="#" role="tab" data-toggle="tab">List</a></li>
-        <li><a href="#" role="tab" data-toggle="tab">Profile</a></li>
-       </ul>
-
-      <!--mapview-->
+<!-- testing...
       <div class="jumbotron" id="mapView">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335086.9333717405!2d12.0750918!3d48.994094749999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479fc121a4676721%3A0xa193050dd13cb73c!2sRegensburg!5e0!3m2!1sde!2sde!4v1405372162978" width=100% height="500" frameborder="0" style="border:0"></iframe>
       </div>
 
-      <!--Register-view-->
       <div class="jumbotron" id="registerView" hidden>
         <form role="form">
           <div class="form-group has-error has-feedback">
@@ -59,7 +76,7 @@
         </form>
       </div>
 
-      <!--Login-view-->
+     
       <div class="jumbotron" id="loginView" hidden>
         <form class="form-signin" role="form">
           <h2 class="form-signin-heading">Please sign in</h2>
@@ -70,7 +87,7 @@
         </form>
       </div>
 
-      <!--New-Item-view-->
+      
       <div class="jumbotron" id="newItemView" hidden>
         <form role="form">
           <div class="form-group">
@@ -130,9 +147,14 @@
           </div>
         </form>
       </div>
-
+-->
 
       <a href="#">Impressum</a>
+      <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+          $('#tabs').tab();
+        });
+</script>
     </div>
         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
