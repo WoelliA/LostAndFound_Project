@@ -20,16 +20,29 @@
     <Content Include="app.css" />
     <Content Include="index.html" />
     <Content Include="libs\common_bundle.js" />
+    <Content Include="libs\foundation.min.js" />
     <Content Include="libs\jquery-2.0.3.min.js" />
     <Content Include="libs\knockout.js" />
+    <Content Include="res\css\foundation.css" />
+    <Content Include="res\css\foundation.min.css" />
+    <Content Include="res\css\normalize.css" />
     <Content Include="res\css\styles.css" />
+    <Content Include="src\howto\viewMitViewModelUnabhängigLaden.html" />
+    <Content Include="src\views\listView.html" />
+    <Content Include="src\views\loginView.html" />
+    <Content Include="src\views\submitItemFormView.html" />
+    <Content Include="src\views\registerView.html" />
     <Content Include="src\views\mapView.html" />
     <Content Include="src\views\mainView.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="libs\typings\foundation\foundation.d.ts" />
     <TypeScriptCompile Include="src\LostAndFoundApp.ts" />
     <TypeScriptCompile Include="src\Presenter.ts" />
+    <TypeScriptCompile Include="src\viewModels\listViewModel.ts" />
+    <TypeScriptCompile Include="src\viewModels\submitItemFormViewModel.ts" />
+    <TypeScriptCompile Include="src\viewModels\loginViewModel.ts" />
     <TypeScriptCompile Include="src\viewModels\mapViewModel.ts" />
     <TypeScriptCompile Include="src\viewModels\mainViewModel.ts" />
   </ItemGroup>
@@ -37,6 +50,7 @@
     <Content Include="libs\.DS_Store" />
     <Content Include="res\.DS_Store" />
     <Content Include="res\images\Thumbs.db" />
+    <Content Include="packages.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

@@ -1,10 +1,12 @@
-﻿var LostAndFound;
+﻿/// <reference path="../libs/typings/foundation/foundation.d.ts" />
+var LostAndFound;
 (function (LostAndFound) {
     var App = (function () {
         function App() {
         }
         App.init = function () {
             var presenter = new LostAndFound.Presenter(window.location);
+            $(document).foundation();
         };
         return App;
     })();

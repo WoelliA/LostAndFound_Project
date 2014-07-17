@@ -1,6 +1,6 @@
-c:\users\andreas\documents\visual studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\obj\Debug\woelliDev.LostAndFound.TypeScript.csprojResolveAssemblyReference.cache
 c:\users\andreas\documents\visual studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\bin\woelliDev.LostAndFound.TypeScript.dll.config
 c:\users\andreas\documents\visual studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\bin\woelliDev.LostAndFound.TypeScript.dll
 c:\users\andreas\documents\visual studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\bin\woelliDev.LostAndFound.TypeScript.pdb
 c:\users\andreas\documents\visual studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\obj\Debug\woelliDev.LostAndFound.TypeScript.dll
 c:\users\andreas\documents\visual studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\obj\Debug\woelliDev.LostAndFound.TypeScript.pdb
+C:\Users\andreas\Documents\Visual Studio 2013\Projects\woelliDev.LostAndFound.TypeScript\woelliDev.LostAndFound.TypeScript\obj\Debug\woelliDev.LostAndFound.TypeScript.csprojResolveAssemblyReference.cache
