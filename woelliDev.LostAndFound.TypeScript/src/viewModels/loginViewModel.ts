@@ -3,7 +3,7 @@
         public title: KnockoutObservable<string> = ko.observable<string>();
 
         constructor() {
-            this.title("Map Title");
+            this.title("Login-View");
             setTimeout(() => this.title("Timeout Title"), 2000);
         }
 

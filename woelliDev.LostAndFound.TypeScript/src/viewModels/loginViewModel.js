@@ -4,7 +4,7 @@
         function LoginViewModel() {
             var _this = this;
             this.title = ko.observable();
-            this.title("Map Title");
+            this.title("Login-View");
             setTimeout(function () {
                 return _this.title("Timeout Title");
             }, 2000);
