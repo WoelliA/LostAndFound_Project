@@ -1,75 +1,46 @@
 ﻿<!--Formular für Anzeigen-->
 
-<form>
+<form data-bind="submit:submit">
     <fieldset style="width: 500px">
         <legend>Submit Report</legend>
         <div class="row">
-            <div class="large-12 columns">
                 <label>
                     Kategorie
-                    <select data-bind="options: categories, optionsText: 'name'"></select>
+                    <select data-bind="options: categories, optionsText: 'name', value: selectedCategory"></select>
                 </label>
-            </div>
+        </div>
+
+        <div class="row">
+                <label>
+                    Kategorie
+                    <select data-bind="options: selectedCategory().subcategories, optionsText: 'name', value: selectedCategorySubcategory"></select>
+                </label>
         </div>
         <div class="row">
-            <div class="large-12 columns">
                 <label>
                     Hersteller
                     <input type="text" placeholder="Hersteller und Modell" />
                 </label>
-            </div>
         </div>
-        <div class="row">
-            <div class="large-12 columns">
+        <!--<div class="row">
                 <label>
                     Farbe
-                    <select data-bind="options: bikeColors, optionsText: 'bikeColor'"></select>
+                    <select data-bind="options: colors, optionsText: 'color'"></select>
                 </label>
-            </div>
-        </div>
+        </div>-->
 
-        <div class="row">
-            <div class="large-12 columns">
+        <!--<div class="row">
                 <label>
                     Bezeichnung
-                    <select data-bind="options: bikeCategories, optionsText: 'description'"></select>
                 </label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="large-12 columns">
-                <label>
-                    Rahmennummer
-                    <input type="number" placeholder="Rahmennummer des Fahrrads" />
-                </label>
-            </div>
-        </div>
-        <!--<div class="row">-->
-            <!--<div class="large-4 columns">
-                <label>
-                    Input Label
-                    <input type="text" placeholder="large-4.columns" />
-                </label>
-            </div>-->
-            <!--<div class="large-4 columns">
-                <label>
-                    Input Label
-                    <input type="text" placeholder="large-4.columns" />
-                </label>
-            </div>-->
-            <!--<div class="large-4 columns">-->
-                <!--<div class="row collapse">
-                    <label>Input Label</label>
-                    <div class="small-9 columns">
-                        <input type="text" placeholder="small-9.columns" />
-                    </div>
-                    <div class="small-3 columns">
-                        <span class="postfix">.com</span>
-                    </div>
-                </div>-->
-            <!--</div>
         </div>-->
+
+        <div class="row" data-bind="if:selectedCategory().hasUniqueID">
+            <label>
+                Rahmennummer
+                <input type="number" placeholder="Rahmennummer des Fahrrads" />
+            </label>
+        </div>
 
         <div class="row">
             <div class="large-6 columns">
@@ -91,9 +62,9 @@
                 </label>
             </div>
         </div>
-        
-            <a href="#" style="align-self:center" class="button [radius round] [small]">Submit Report</a>
-        
+
+        <input type="submit" style="align-self:center" class="button [radius round] [small]">Submit Report</>
+
 
     </fieldset>
 </form>

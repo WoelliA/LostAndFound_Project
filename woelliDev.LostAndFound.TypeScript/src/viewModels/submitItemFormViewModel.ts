@@ -1,47 +1,34 @@
-﻿module ViewModels {
+﻿/// <reference path="../model/models.ts" />
+/// <reference path="../lostandfoundapp.ts" />
+module ViewModels {
+    import Category = LAF.Category;
+
     export class SubmitItemFormViewModel {
         public title: KnockoutObservable<string> = ko.observable<string>();
         public categories: KnockoutObservableArray<Category> = ko.observableArray<Category>();
-        public bikeCategories: KnockoutObservableArray<BikeCategory> = ko.observableArray<BikeCategory>();
-        public bikeColors: KnockoutObservableArray<BikeColor> = ko.observableArray<BikeColor>();
+        public selectedCategory: KnockoutObservable<Category> = ko.observable<Category>();
+        public selectedCategorySubcategory: KnockoutObservable<LAF.SubCat> = ko.observable<LAF.SubCat>();
+
         constructor() {
             this.title("Map Title");
             setTimeout(() => this.title("Timeout Title"), 2000);
         }
 
         public init(parameters: any): void {
-            this.categories.push(new Category("Fahrrad"));
-            this.categories.push(new Category("Accessoir"));
-            this.bikeCategories.push(new BikeCategory("Herrenrad"));
-            this.bikeCategories.push(new BikeCategory("Damenrad"));
-            this.bikeCategories.push(new BikeCategory("Rennrad"));
-            this.bikeCategories.push(new BikeCategory("BMX"));
-            this.bikeCategories.push(new BikeCategory("E-Bike"));
-            this.bikeCategories.push(new BikeCategory("Sonstiges"));
-            this.bikeColors.push(new BikeColor("Schwarz"));
-            this.bikeColors.push(new BikeColor("Weiss"));
-            this.bikeColors.push(new BikeColor("Blau"));
-            this.bikeColors.push(new BikeColor("Gruen"));
-            this.bikeColors.push(new BikeColor("Gelb"));
-            this.bikeColors.push(new BikeColor("Rot"));
-            this.bikeColors.push(new BikeColor("Violett"));  
-        }
-    }
-
-    export class Category {
-        constructor(public name: string) {
+            Service.getCategories((cats) => {
+                (<Array<Category>>cats).forEach((c) => this.categories.push(c));
+            });
 
         }
+
+        public submit() {
+            console.log(this.selectedCategory());
+            console.log(this.selectedCategorySubcategory());
+        }
+
+
+
     }
 
-    export class BikeCategory {
-        constructor(public description: string) {
-
-        }
-    }
-    export class BikeColor {
-        // möglich wäre hier ein ColorPicker!!!!
-        constructor(public bikeColor: string) {
-        }
-    }
+   
 }

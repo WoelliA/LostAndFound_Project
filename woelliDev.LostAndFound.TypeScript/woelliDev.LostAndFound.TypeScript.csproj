@@ -28,6 +28,12 @@
     <Content Include="res\css\normalize.css" />
     <Content Include="res\css\styles.css" />
     <Content Include="src\howto\viewMitViewModelUnabhängigLaden.html" />
+    <Content Include="src\model\model_bundle.js">
+      <DependentUpon>model_bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="src\model\model_bundle.min.js">
+      <DependentUpon>model_bundle.js</DependentUpon>
+    </Content>
     <Content Include="src\views\listView.html" />
     <Content Include="src\views\loginView.html" />
     <Content Include="src\views\submitItemFormView.html" />
@@ -39,6 +45,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="libs\typings\foundation\foundation.d.ts" />
     <TypeScriptCompile Include="src\LostAndFoundApp.ts" />
+    <TypeScriptCompile Include="src\model\LAFModel.ts" />
+    <TypeScriptCompile Include="src\model\models.ts" />
     <TypeScriptCompile Include="src\Presenter.ts" />
     <TypeScriptCompile Include="src\viewModels\listViewModel.ts" />
     <TypeScriptCompile Include="src\viewModels\submitItemFormViewModel.ts" />
@@ -51,6 +59,10 @@
     <Content Include="res\.DS_Store" />
     <Content Include="res\images\Thumbs.db" />
     <Content Include="packages.config" />
+    <Content Include="src\model\model_bundle.js.bundle" />
+    <Content Include="src\model\model_bundle.min.js.map">
+      <DependentUpon>model_bundle.min.js</DependentUpon>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

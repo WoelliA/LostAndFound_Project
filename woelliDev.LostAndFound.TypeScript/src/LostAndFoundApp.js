@@ -1,4 +1,5 @@
 ﻿/// <reference path="../libs/typings/foundation/foundation.d.ts" />
+/// <reference path="model/lafmodel.ts" />
 var LostAndFound;
 (function (LostAndFound) {
     var App = (function () {
@@ -7,6 +8,7 @@ var LostAndFound;
         App.init = function () {
             var presenter = new LostAndFound.Presenter(window.location);
             $(document).foundation();
+            Service = new LAF.DummyService();
         };
         return App;
     })();
