@@ -1,8 +1,14 @@
 ﻿<!--Formular für Anzeigen-->
-
+<head>
+    <link href="../../res/css/foundation.css" rel="stylesheet" />
+</head>
 <form data-bind="submit:submit">
     <fieldset style="width: 500px">
-        <legend>Submit Report</legend>
+        <legend>Anzeige aufgeben</legend>
+        <div>
+            <div style="float:left"><input type="radio" value="stolen" data-bind="checked:type">Gestohlen</div>
+            <div><input type="radio" value="lost" data-bind="checked:type">Verloren</div>
+        </div>
         <div class="row">
                 <label>
                     Kategorie
@@ -41,30 +47,14 @@
                 <input type="number" placeholder="Rahmennummer des Fahrrads" />
             </label>
         </div>
-
         <div class="row">
-            <div class="large-6 columns">
-                <label>Choose Your Favorite</label>
-                <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-                <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
-            </div>
-            <div class="large-6 columns">
-                <label>Check these out</label>
-                <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-                <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-12 columns">
                 <label>
-                    Further description
-                    <textarea placeholder="Any important information about your item"></textarea>
+                    Weitere Informationen
+                    <textarea placeholder="Sonstige wichtige Informationen"></textarea>
                 </label>
-            </div>
         </div>
 
-        <input type="submit" style="align-self:center" class="button [radius round] [small]">Submit Report</>
-
+        <input type="submit" class="button">
 
     </fieldset>
 </form>

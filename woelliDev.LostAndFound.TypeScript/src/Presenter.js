@@ -62,7 +62,8 @@ var LostAndFound;
                 viewModelInstanceCreator: new InstanceLoader(window, "ViewModels"),
                 origin: origin,
                 viewLoaderSettings: this.viewLoaderSettings,
-                viewModelLoaderSettings: this.viewModelLoaderSettings
+                viewModelLoaderSettings: this.viewModelLoaderSettings,
+                bindingTarget: document.getElementById('content')
             };
         };
         return Presenter;

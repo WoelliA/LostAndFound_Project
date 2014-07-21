@@ -23,7 +23,7 @@ module LostAndFound {
 
         private presenterSettings: IPresenterSettings;
 
-        private mainPresenter: IMainPresenter;
+        public mainPresenter: IMainPresenter;
         private modalPresenter: IPresenter;
 
         constructor(location: Location) {
@@ -77,7 +77,8 @@ module LostAndFound {
                 viewModelInstanceCreator: new InstanceLoader(window, "ViewModels"),
                 origin: origin,
                 viewLoaderSettings: this.viewLoaderSettings,
-                viewModelLoaderSettings: this.viewModelLoaderSettings
+                viewModelLoaderSettings: this.viewModelLoaderSettings,
+                bindingTarget: document.getElementById('content')
             }
         }
     }

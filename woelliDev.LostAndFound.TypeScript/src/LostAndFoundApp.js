@@ -9,6 +9,7 @@ var LostAndFound;
             var presenter = new LostAndFound.Presenter(window.location);
             $(document).foundation();
             Service = new LAF.DummyService();
+            presenter.mainPresenter.show("main", null);
         };
         return App;
     })();

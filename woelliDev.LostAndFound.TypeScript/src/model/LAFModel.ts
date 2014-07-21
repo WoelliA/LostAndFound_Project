@@ -2,10 +2,18 @@
 
   
     export interface IService {
-         getCategories(callback: Function);
+        getCategories(callback: Function);
+        createItem(settings:IItemsSettings, callback:Function);
+    }
+
+    export interface IItemsSettings {
+        
     }
     export class Service implements IService  {
         getCategories(callback: Function) {
+        
+        }
+        createItem(settings: IItemsSettings, callback: Function) {
 
         }
     }
@@ -29,6 +37,10 @@
             categories.push(new Category("Accessoir", subCat2, false));
 
             callback(categories);
+        }
+
+        createItem(settings: IItemsSettings, callback: Function) {
+            setTimeout(callback, 2000);
         }
     }
 }

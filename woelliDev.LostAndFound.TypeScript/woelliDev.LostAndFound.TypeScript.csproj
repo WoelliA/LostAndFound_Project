@@ -27,6 +27,7 @@
     <Content Include="res\css\foundation.min.css" />
     <Content Include="res\css\normalize.css" />
     <Content Include="res\css\styles.css" />
+    <Content Include="res\images\metro-loading.gif" />
     <Content Include="src\howto\viewMitViewModelUnabhängigLaden.html" />
     <Content Include="src\model\model_bundle.js">
       <DependentUpon>model_bundle.js.bundle</DependentUpon>
@@ -40,6 +41,7 @@
     <Content Include="src\views\registerView.html" />
     <Content Include="src\views\mapView.html" />
     <Content Include="src\views\mainView.html" />
+    <Content Include="TODO.txt" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,7 @@
     <TypeScriptCompile Include="src\viewModels\loginViewModel.ts" />
     <TypeScriptCompile Include="src\viewModels\mapViewModel.ts" />
     <TypeScriptCompile Include="src\viewModels\mainViewModel.ts" />
+    <TypeScriptCompile Include="src\viewModels\viewModelBase.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="libs\.DS_Store" />

@@ -16,9 +16,9 @@
     <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
-                <h1><a href="#">Lost and found</a></h1>
+                <h1><a href="#/main">Lost and found</a></h1>
             </li>
-           
+
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
@@ -43,137 +43,15 @@
             </ul>
         </section>
     </nav>
-    <div id="frame" data-defer="main">
-    </div>
-    <!--<div class="container">
-        <div class="page-header">
-
-            <h2 class="text-muted">Lost and found</h2>
-            <form role="form">
-                <div class="form-group">
-                    <input id="searchfield" type="text" class="form-control" placeholder="Search(Ort, Zeit, Item?!)">
-                </div>
-            </form>
-
-        </div>-->
-    <!--<div id="content">
-        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-            <li class="active"><a href="#map" data-toggle="tab">Map</a></li>
-            <li><a href="#list" data-toggle="tab">List</a></li>
-            <li><a href="#profile" data-toggle="tab">Profile</a></li>
-        </ul>
-
-        <div id="tabContent" class="tab-content">
-            <div class="tab-pane active fade" id="map">
-                <p>map content hier</p>
-            </div>
-            <div class="tab-pane fade" id="list">
-                <p>list content hier</p>
-            </div>
-            <div class="tab-pane fade" id="profile">
-                <p>profile content hier</p>
+    <div id="content" style="position:relative">
+        <div id="frame"></div>
+        <div data-bind="visible: isloading() && isloading">
+            <div style="position:absolute; top:0; left:0; bottom:0; right:0">
+                <img style="margin-left: auto;margin-right: auto;left: 0;right: 0;
+top: 0;position: absolute;bottom: 0;margin-top: auto;margin-bottom: auto;" src="res/images/metro-loading.gif" />
             </div>
         </div>
-
-    </div>-->
-    <!-- testing...
-          
-
-          <div class="jumbotron" id="registerView" hidden>
-            <form role="form">
-              <div class="form-group has-error has-feedback">
-                <label for="inputEmailRegister">Email:</label>
-                <input type="email" class="form-control" id="inputEmailRegister" placeholder="Email adress" required>
-                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-              </div>
-
-              <div class="form-group has-error has-feedback">
-                <label for="inputPassword1Register">Password:</label>
-                <input type="password" class="form-control" id="inputPassword1Register" placeholder="Password" required>
-                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-              </div>
-
-              <div class="form-group has-error has-feedback">
-                <label for="inputPassword2Register">Repeat password:</label>
-                <input type="password" class="form-control" id="inputPassword2Register" placeholder="Password" required>
-                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-              </div>
-
-              <button type="submit" class="btn btn-default" disabled="disabled">Submit</button>
-
-            </form>
-          </div>
-
-
-         
-
-
-          <div class="jumbotron" id="newItemView" hidden>
-            <form role="form">
-              <div class="form-group">
-                <label for="itemType">Nach was wird gesucht?</label>
-                <select class="form-control" id="itemType">
-                  <option>Fahrrad</option>
-                  <option>Accessoires</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="bikeType">FahrradTyp</label>
-                <select class="form-control" id="bikeType">
-                  <option>Herrenrad</option>
-                  <option>Damenrad</option>
-                  <option>Rennrad</option>
-                  <option>BMX</option>
-                  <option>Sonstiges</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="manufacturer">Hersteller</label>
-                <input class="form-control" type="text" id="manufacturer">
-              </div>
-              <div class="form-group">
-                <label for="color">Farbe</label>
-                <select class="form-control" id="color">
-                  <option>Schwarz</option>
-                  <option>Weiss</option>
-                  <option>Blau</option>
-                  <option>Gruen</option>
-                  <option>Gelb</option>
-                  <option>Rot</option>
-                  <option>Violett</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="chassisNumber">Rahmennummer</label>
-                <input class="form-control" type="text" id="chassisNumber">
-              </div>
-              <div class="form-group">
-                <label for="wheelSize">Radgroesse</label>
-                <input class="form-control" type="text" id="wheelSize" placeholder="in Zoll, ohne Sonderzeichen, z.B.: 28">
-              </div>
-              <div class="form-group">
-                <label for="place">Ort</label>
-                <input class="form-control" type="text" id="place">
-              </div>
-              <div class="form-group">
-                <label for="startDate">Zwischen</label>
-                <input class="form-control" type="text" id="startDate">
-                <label for="endDate">und</label>
-                <input class="form-control" type="text" id="endDate">
-              </div>
-              <div class="form-group">
-                <label for="additions">Sonstiges</label>
-                <textarea class="form-control" rows="3" id="additions" placeholder="max 140 Zeichen"></textarea>
-              </div>
-            </form>
-          </div>
-    -->
-    <!--<a href="#">Impressum</a>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $('#tabs').tab();
-        });
-    </script>-->
+    </div>
     <script src="src/model/model_bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">    </script>
     <!--<script src="res/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>-->
@@ -181,7 +59,8 @@
     <script src="libs/common_bundle.js"></script>
     <script src="libs/knockout.js"></script>
     <script src="src/Presenter.js"></script>
+    <script src="src/viewModels/viewModelBase.js"></script>
     <script src="src/LostAndFoundApp.js"></script>
-    
+
 </body>
 </html>

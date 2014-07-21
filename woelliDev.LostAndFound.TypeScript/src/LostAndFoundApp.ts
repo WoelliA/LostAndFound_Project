@@ -9,6 +9,7 @@ module LostAndFound {
             var presenter = new Presenter(window.location);
             (<any>$(document)).foundation();
             Service = new LAF.DummyService();
+            presenter.mainPresenter.show("main", null);
         }
     }
 }

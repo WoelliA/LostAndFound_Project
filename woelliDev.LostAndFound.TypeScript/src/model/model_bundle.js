@@ -38,6 +38,8 @@ var LAF;
         }
         Service.prototype.getCategories = function (callback) {
         };
+        Service.prototype.createItem = function (settings, callback) {
+        };
         return Service;
     })();
     LAF.Service = Service;
@@ -62,6 +64,10 @@ var LAF;
             categories.push(new LAF.Category("Accessoir", subCat2, false));
 
             callback(categories);
+        };
+
+        DummyService.prototype.createItem = function (settings, callback) {
+            setTimeout(callback, 2000);
         };
         return DummyService;
     })();
